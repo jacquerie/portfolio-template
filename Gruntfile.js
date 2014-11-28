@@ -1,13 +1,9 @@
 module.exports = function (grunt) {
   grunt.initConfig({
-    clean: {
-      dist: ['dist/css/application.css']
-    },
-
     cssmin: {
       dist: {
         files: {
-          'dist/css/application.min.css': ['dist/css/application.css']
+          'dist/css/application.min.css': ['dist/css/application.min.css']
         }
       }
     },
@@ -31,13 +27,12 @@ module.exports = function (grunt) {
     uncss: {
       dist: {
         files: {
-          'dist/css/application.css': ['index.html']
+          'dist/css/application.min.css': ['index.html']
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-processhtml');
@@ -48,6 +43,5 @@ module.exports = function (grunt) {
     'uncss',
     'cssmin',
     'processhtml',
-    'clean'
   ]);
 };
