@@ -8,6 +8,13 @@ module.exports = function (grunt) {
       }
     },
 
+    uglify: {
+      build: {
+        src: 'js/*.js',
+        dest: 'dist/js/application.min.js'
+      }
+    },
+
     uncss: {
       dist: {
         files: {
@@ -17,8 +24,9 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-uncss');
 
-  grunt.registerTask('default', ['uncss', 'processhtml']);
+  grunt.registerTask('default', ['uglify', 'uncss', 'processhtml']);
 };
