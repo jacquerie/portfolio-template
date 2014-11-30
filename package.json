@@ -1,26 +1,4 @@
 {
-  "name": "jacquerie-portfolio-template",
-  "version": "0.0.1",
-  "description": "A template for my portfolio items.",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jacquerie/portfolio-template"
-  },
-  "keywords": [
-    "jacquerie",
-    "portfolio",
-    "template"
-  ],
-  "author": "Jacopo Notarstefano",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jacquerie/portfolio-template/issues"
-  },
-  "homepage": "https://github.com/jacquerie/portfolio-template",
   "dependencies": {
     "bootstrap": "^3.3.1",
     "grunt": "^0.4.5",
