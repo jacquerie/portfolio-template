@@ -11,7 +11,7 @@ module.exports = function (grunt) {
     processhtml: {
       dist: {
         files: {
-          'dist/index.html': ['index.html']
+          'dist/index.html': ['src/index.html']
         }
       }
     },
@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          'dist/js/application.min.js': ['js/*.js']
+          'dist/js/application.min.js': ['src/js/*.js']
         }
       }
     },
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     uncss: {
       dist: {
         files: {
-          'dist/css/application.min.css': ['index.html']
+          'dist/css/application.min.css': ['src/index.html']
         }
       }
     }
