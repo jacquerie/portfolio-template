@@ -15,6 +15,20 @@ module.exports = function(grunt) {
       ],
     },
 
+    jsonlint: {
+      all: {
+        options: {
+          format: true,
+          indent: 2,
+        },
+        src: [
+          '.eslintrc.json',
+          'package.json',
+          'package-lock.json',
+        ],
+      },
+    },
+
     processhtml: {
       dist: {
         files: {
@@ -43,6 +57,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-jsonlint');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-uncss');
 
@@ -53,5 +68,8 @@ module.exports = function(grunt) {
     'processhtml',
   ]);
 
-  grunt.registerTask('lint', ['eslint']);
+  grunt.registerTask('lint', [
+    'jsonlint',
+    'eslint',
+  ]);
 };
