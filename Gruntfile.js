@@ -38,7 +38,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-uncss');
 
-  grunt.registerTask('default', [
+  grunt.registerTask('build', [
     'uglify',
     'uncss',
     'cssmin',
