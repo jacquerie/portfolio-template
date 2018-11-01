@@ -1,15 +1,6 @@
 # portfolio-template #
 
-TODO
-
-## Install ##
-
-1. Clone this repository: `git clone https://github.com/jacquerie/portfolio-template.git`
-2. Install the dependencies: `cd portfolio-template && npm install`
-
-## Usage ##
-
-TODO
+[![Build Status](https://travis-ci.org/jacquerie/portfolio-template.svg?branch=master)](https://travis-ci.org/jacquerie/portfolio-template)
 
 ## Author ##
 
