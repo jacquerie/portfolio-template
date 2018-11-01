@@ -8,6 +8,10 @@ module.exports = function (grunt) {
       }
     },
 
+    eslint: {
+      target: ['src/js/application.js']
+    },
+
     processhtml: {
       dist: {
         files: {
@@ -35,6 +39,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-uncss');
 
@@ -44,4 +49,6 @@ module.exports = function (grunt) {
     'cssmin',
     'processhtml',
   ]);
+
+  grunt.registerTask('lint', ['eslint']);
 };
