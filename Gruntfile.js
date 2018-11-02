@@ -15,6 +15,18 @@ module.exports = function(grunt) {
       ],
     },
 
+    htmlmin: {
+      options: {
+        collapseWhitespace: true,
+        minifyJS: true,
+      },
+      dist: {
+        files: {
+          'dist/index.html': 'dist/index.html',
+        },
+      },
+    },
+
     jsonlint: {
       all: {
         options: {
@@ -55,6 +67,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-uglify-es');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-jsonlint');
@@ -66,6 +79,7 @@ module.exports = function(grunt) {
     'uncss',
     'cssmin',
     'processhtml',
+    'htmlmin',
   ]);
 
   grunt.registerTask('lint', [
