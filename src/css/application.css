@@ -7,6 +7,25 @@ body {
   max-width: 600px;
 }
 
+.donate a {
+  height: 63px !important;
+  line-height: 63px !important;
+}
+
+.donate a span {
+  margin-left: 5px !important;
+}
+
+.share a {
+  margin-right: 1px;
+}
+
+.share a img {
+  background-color: #212529;
+  width: 63px;
+  height: 63px;
+}
+
 .signature {
   text-align: center;
 }
