@@ -7,6 +7,10 @@ body {
   max-width: 600px;
 }
 
+.main {
+  margin-bottom: 32px;
+}
+
 .donate a {
   height: 63px !important;
   line-height: 63px !important;
